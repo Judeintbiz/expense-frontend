@@ -5,22 +5,4 @@ on:
       - 'v*'
 jobs:
   CI_Steps:
-    runs-on: self-hosted
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-
-    - name: Unit Tests
-      run: echo Unit Tests
-
-    - name: SAST Scans
-      run: echo SAST Scans
-
-    - name: SAST SCA
-      run: echo SAST SCA
-
-    - name: Detect Secrets in Source Code
-      run: echo Secrets in Source Code
-
-    - name: Produce Artifacts
-      run: echo Produce Artifacts
+    uses: Judeintbiz/githuc-actions/.github/workflows/Release_Tags.yml@main
